@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or the datasets, please cite the paper below."
+title: "Phase-decomposed energy measurement of camera-based water-meter reading nodes"
+authors:
+  - family-names: Chakir
+    given-names: Youness
+    affiliation: "Chouaib Doukkali University, ELITES"
+  - family-names: Aaroud
+    given-names: Abdessadek
+    affiliation: "Chouaib Doukkali University, ELITES"
+version: 1.0.0
+date-released: 2026-07-22
+license: MIT
+preferred-citation:
+  type: article
+  title: "Phase-decomposed energy measurement of camera-based water-meter reading nodes: model correction, hardware limits, and a measured basis for multi-year autonomy"
+  authors:
+    - family-names: Chakir
+      given-names: Youness
+    - family-names: Aaroud
+      given-names: Abdessadek
+  year: 2026
+  journal: "(under review)"

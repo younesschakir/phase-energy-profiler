@@ -1,0 +1,10 @@
+phase,mean_mA,peak_mA,dur_ms,energy_mJ,energy_sd_mJ,notes
+P1_wake_recover,13.4,14.1,1.9,0.1,0.0,radio standby recover after STOP2
+P2_capture_gated,127.8,183.7,1847.9,1229.7,2.8,gate on + camera cold re-InitCAM + AEC settle + capture
+P3_preproc,13.4,13.8,1.8,0.2,0.1,reference load
+P4_lora_tx,91.0,96.9,2311.0,1099.2,33.0,7-packet optimized JPEG (~1451 B EOI-stripped)
+P5_rx,14.5,15.5,109.1,8.3,0.1,Class-A RX window
+P6_sleep_entry,13.2,14.0,2.9,0.2,0.0,warm radio sleep + STOP2 entry
+ACTIVE_TOTAL,,,4275,2338,,per-cycle active energy; n=15 cycles
+SLEEP_FLOOR,5.6,,,,,median mA board overhead (LED PB5 + CP2102); chip STOP2 ~uA
+CAMERA_GATED,0.2,,,,,low-side N-FET + Hi-Z pins contribution

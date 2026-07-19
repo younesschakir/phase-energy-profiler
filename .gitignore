@@ -1,0 +1,11 @@
+# PlatformIO build artifacts
+.pio/
+.vscode/
+# Python
+__pycache__/
+*.pyc
+# Large raw waveforms live in the Zenodo deposit, not the repo
+samples_*.csv
+# OS noise
+Thumbs.db
+.DS_Store

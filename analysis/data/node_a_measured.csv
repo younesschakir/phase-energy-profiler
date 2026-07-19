@@ -1,0 +1,9 @@
+phase,mean_mA,peak_mA,dur_ms,energy_mJ,energy_sd_mJ,notes
+P1_init,41.5,49.2,1,0.2,0.0,wake
+P2_capture_gated,115.9,158.4,1916,1157.8,3.4,gate on + ArduCAM cold InitCAM + QVGA capture + read JPEG + gate off
+P3_preproc,41.7,46.3,1,0.2,0.0,reference load
+P4_jomjol_cnn,51.5,70.8,825,222.8,0.2,REAL jomjol dig-class100, 8 invokes (replaces fake ~33.9M-MAC proxy)
+P5_wifi_tx,77.4,346.7,439,172.2,101.2,WiFi connect + UDP send reading (variance = connect time)
+P6_sleep_entry,41.1,41.7,1,0.2,0.0,deep-sleep entry
+ACTIVE_TOTAL,,,3183,1553,,per-cycle active energy; n=15 cycles
+SLEEP_FLOOR,0.19,,,,,~190uA deep sleep + gated ArduCAM (was ~137mA with un-gateable integrated Sense camera)

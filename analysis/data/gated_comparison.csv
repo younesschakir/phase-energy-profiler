@@ -1,0 +1,5 @@
+variant,P2_capture_mJ,P4_tx_mJ,P4_tx_dur_ms,P4_tx_mA,active_total_mJ,sleep_mA,notes
+B_ungated,98,6547,5085,233,6779,137,"original Strategy B (phases_B.csv): camera ON whole cycle incl 5s TX"
+B_gated,1151,2276,4778,91,3436,5,"full 320x240 color, gated+STOP2 (node_B); camera off during TX"
+node_optimized,1230,1099,2311,91,2338,5,"160x120 ROI+grayscale+QS+EOI, gated+STOP2 (node)"
+comment,,,,,,,"gating cuts B TX 2.9x (removes camera-during-airtime); optimization cuts active a further 32% (payload); sleep 137mA->~5mA board (uA chip)"
