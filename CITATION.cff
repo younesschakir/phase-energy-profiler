@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software or the datasets, please cite the paper below."
-title: "Phase-decomposed energy measurement of camera-based water-meter reading nodes"
+title: "phase-energy-profiler: a reproducible methodology for phase-resolved energy characterization of camera-based meter-reading nodes"
+repository-code: "https://github.com/younesschakir/phase-energy-profiler"
 authors:
   - family-names: Chakir
     given-names: Youness
@@ -13,7 +14,7 @@ date-released: 2026-07-22
 license: MIT
 preferred-citation:
   type: article
-  title: "Phase-decomposed energy measurement of camera-based water-meter reading nodes: model correction, hardware limits, and a measured basis for multi-year autonomy"
+  title: "A reproducible methodology for phase-resolved energy characterization of camera-based meter-reading nodes: model correction, hardware limits, and a measured basis for multi-year autonomy"
   authors:
     - family-names: Chakir
       given-names: Youness
