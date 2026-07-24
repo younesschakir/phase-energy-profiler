@@ -14,7 +14,7 @@ date-released: 2026-07-22
 license: MIT
 preferred-citation:
   type: article
-  title: "A reproducible methodology for phase-resolved energy characterization of camera-based meter-reading nodes: model correction, hardware limits, and a measured basis for multi-year autonomy"
+  title: "Phase-decomposed energy measurement of camera-based water-meter reading nodes: model correction, hardware limits, and a measured basis for multi-year autonomy"
   authors:
     - family-names: Chakir
       given-names: Youness

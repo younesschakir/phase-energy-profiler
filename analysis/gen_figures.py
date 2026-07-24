@@ -84,8 +84,15 @@ NA_e, NA_sd, NA_m = load_phases("phases_node_a.csv")   # A node
 # FIG 1 — measurement architecture (block diagram)
 # ============================================================
 def fig_rig():
-    fig, ax = plt.subplots(figsize=(DC, 2.6))
+    photo = mpimg.imread(os.path.join(HERE, "rig_photo.jpg"))
+    ph_ar = photo.shape[0] / photo.shape[1]           # height/width
+    photo_h = DC * ph_ar
+    fig = plt.figure(figsize=(DC, 2.6 + photo_h + 0.15))
+    gs = fig.add_gridspec(2, 1, height_ratios=[2.6, photo_h], hspace=0.05)
+    ax = fig.add_subplot(gs[0])
     ax.set_xlim(0, 10); ax.set_ylim(0, 3.4); ax.axis("off")
+    ax.text(0.0, 1.02, "(a)", transform=ax.transAxes, fontsize=9,
+            fontweight="bold", va="bottom", color=INK)
     def box(x, y, w, h, label, fc="#f2f2f2", ec=INK):
         ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.06",
                                     fc=fc, ec=ec, lw=0.9))
@@ -113,6 +120,10 @@ def fig_rig():
     ax.text(5.6, 1.5, "UART phase markers\n(0xA1..0xA6, 9600 Bd)",
             fontsize=6.8, color=C_A)
     arrow(4.3, 0.75, 5.3, 0.75)
+    axp = fig.add_subplot(gs[1])
+    axp.imshow(photo); axp.axis("off")
+    axp.text(0.0, 1.0, "(b)", transform=axp.transAxes, fontsize=9,
+             fontweight="bold", va="bottom", color=INK)
     save(fig, "fig1_rig")
 fig_rig()
 
