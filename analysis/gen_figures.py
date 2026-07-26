@@ -332,7 +332,7 @@ fig_sleepfloor()
 # ============================================================
 def fig_autonomy():
     BATT_J = 19.0 * 3.6 * 3600   # cell energy, 19 Ah * 3.6 V (ER34615)
-    SHELF_D = 15*365
+    SHELF_D = 15*365.25
     def days(e_mJ, isl_mA, nd, V, eta):
         daily = nd*e_mJ/1000.0 + isl_mA/1000.0*V*86400
         return min(eta*BATT_J/daily, SHELF_D)
@@ -346,7 +346,7 @@ def fig_autonomy():
     ]
     fig, ax = plt.subplots(figsize=(SC, 2.7))
     for name, e, isl, V, eta, col, ls in curves:
-        ax.plot(nds, [days(e, isl, n, V, eta)/365 for n in nds], ls, color=col,
+        ax.plot(nds, [days(e, isl, n, V, eta)/365.25 for n in nds], ls, color=col,
                 lw=1.6, label=name)
     ax.axhline(SHELF_D/365, color="#888888", lw=0.8, ls="-.")
     ax.text(1.4, SHELF_D/365*1.15, "battery shelf life", fontsize=6.5,
