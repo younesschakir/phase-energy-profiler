@@ -40,8 +40,28 @@ docs/
   wiring.md                  rig + camera-gate wiring
 ```
 
-Full raw current waveforms (`samples_*.csv`, ~110 MB) are in the Zenodo
-deposit, not in this repository.
+Full raw current waveforms (`samples_*.csv`, ~110 MB uncompressed) are in the
+Zenodo deposit as `raw_waveforms_v1.0-paper.zip`, not in this repository.
+
+### How the paper's payload sizes relate to this data
+
+The packet counts and byte figures in Table 2 of the paper are **derived from
+each configuration's measured transmit airtime** (the `dur_ms` of phase 4 in
+`phases_*.csv`) using the standard LoRa airtime formulation, not read from the
+firmware. Two consequences worth knowing before comparing numbers:
+
+* Byte figures carry the granularity of one 222-byte fragment, so e.g. the E5
+  node's "~1.4 kB / 7 packets" means 1333–1554 B.
+* The firmware also logs the frame-buffer length it read from the camera. For
+  the un-gated strategies that length is the ArduCAM's 512-byte-page-rounded
+  value (it includes padding that is transmitted), while the gated firmware
+  truncates at the JPEG end-of-image marker. A firmware-reported length will
+  therefore not always equal the airtime-derived payload; where the paper
+  reports directly measured JPEG bytes (Figure 4 and Section 5.3), it says so.
+
+Per-phase energies, currents and durations in the paper's Tables 3 and 5 come
+straight from `phases_*.csv`, so any of them can be checked against
+`V x I x t` with the values printed in those tables.
 
 ## Reproducing a measurement
 

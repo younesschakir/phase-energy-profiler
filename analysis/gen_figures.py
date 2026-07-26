@@ -309,7 +309,7 @@ fig_ladder()
 def fig_sleepfloor():
     rows = [  # (label, mA, color)
         ("Integrated camera, no gate\n(XIAO Sense, as-built)", 93, C_A),
-        ("Module camera, no gate\n(Wio-E5 + ArduCAM)", 137, C_B),
+        ("Module camera, no gate\n(Wio-E5 + ArduCAM system,\n137 mA of it camera)", 150, C_B),
         ("Camera gated, MCU awake\n(delay-gap firmware)", 13, C_C),
         ("E5 node: gated + STOP2\n(dev-board overhead)", 5.5, C_ENODE),
         ("A node: gated + deep sleep", 0.19, C_ANODE),
