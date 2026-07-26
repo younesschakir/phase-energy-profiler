@@ -313,7 +313,7 @@ def fig_sleepfloor():
         ("Camera gated, MCU awake\n(delay-gap firmware)", 13, C_C),
         ("E5 node: gated + STOP2\n(dev-board overhead)", 5.5, C_ENODE),
         ("A node: gated + deep sleep", 0.19, C_ANODE),
-        ("Bare chipset (datasheet)\nSTM32WLE5 + SX1262 retention", 0.004, "#666666"),
+        ("Bare chipset (datasheet)\nSTM32WLE5 + SX1262 retention", 0.003, "#666666"),
     ]
     fig, ax = plt.subplots(figsize=(SC, 2.7))
     ys = range(len(rows))[::-1]
